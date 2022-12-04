@@ -10,8 +10,8 @@ public class DatabaseOps {
 
     public void createConnection() {
         String databaseURL = "jdbc:oracle:thin:@199.212.26.208:1521:SQLD"; //for remote connection
-        String username = "COMP228_F22_jg_60";
-        String password = "dreamboat123";
+        String username = "";
+        String password = "";
 
         try {
             //1. download the ojdbc6.jar
