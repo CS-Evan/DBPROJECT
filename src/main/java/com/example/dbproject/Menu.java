@@ -59,14 +59,4 @@ public class Menu extends Stage {
 		this.close();
 		
 	}
-	
-	
-	
-
-	
-//	public static void main(String[] args) {
-//		
-//		launch(args);
-//
-//	}
 }
