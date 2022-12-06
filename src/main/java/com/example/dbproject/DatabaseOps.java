@@ -14,11 +14,8 @@ public class DatabaseOps {
         String password = "";
 
         try {
-            //1. download the ojdbc6.jar
-            //2. register the driver
             Class.forName("oracle.jdbc.OracleDriver");
 
-            //3. Open a connection to the database
             Object connection = DriverManager.getConnection(databaseURL, username, password);
             System.out.println("Database connection successfully established.");
 
