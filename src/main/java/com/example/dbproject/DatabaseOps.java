@@ -26,8 +26,8 @@ public class DatabaseOps {
         }
     }
 
-    public void showEmployeeRecords() {
-        String query = "SELECT * FROM EMPLOYEES";
+    public String showEmployeeRecords() {
+        String query = "SELECT fname, lname FROM EMPLOYEES";
         System.out.println(query);
         try {
             if (!connection.isClosed()) {
@@ -56,5 +56,42 @@ public class DatabaseOps {
         } catch (SQLException sqle) {
             System.out.println("Cannot retrieve records from the database : " + sqle);
         }
+        return query;
     }
+
+
+    public String showFirstName() {
+        String query = "SELECT fname FROM EMPLOYEES";
+        System.out.println(query);
+        try {
+            if (!connection.isClosed()) {
+                Statement statement = connection.createStatement();
+                ResultSet resultSet = statement.executeQuery(query);
+                ResultSetMetaData resultSetMetaData = resultSet.getMetaData();
+
+                String output = "";
+                int columnCount = resultSetMetaData.getColumnCount();
+
+                while (resultSet.next()) {
+                    output = "";
+
+                    for (int col = 1; col <= columnCount; col++) {
+                        output += resultSetMetaData.getColumnName(col) + " : " + resultSet.getString(col) + " --- ";
+                    }
+                    System.out.println(output);
+                }
+
+                if (!statement.isClosed()) {
+                    statement.close();
+                }
+            } else {
+                System.out.println("Cannot show statement as the connection is closed.");
+            }
+        } catch (SQLException sqle) {
+            System.out.println("Cannot retrieve records from the database : " + sqle);
+        }
+        return query;
+    }
+
+
 }
