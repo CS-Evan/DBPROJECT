@@ -32,8 +32,9 @@ public class EmployeeMenu extends Stage{
 	Label salaryLbl = new Label(" Salary: ");
 	Label hireDateLbl = new Label(" Hire Date: ");
 	Label managerIdLbl = new Label(" Manager ID: ");
-	Label jobIdLbl = new Label(" Hire Date: ");
-	Label deptIdLbl = new Label(" Hire Date: ");
+	Label jobIdLbl = new Label(" JobID: ");
+	Label deptIdLbl = new Label(" Dept ID: ");
+	Label employeesQueryLbl = new Label(" Employee List: ");
 
 	// Textboxes
 	TextField fnameTF = new TextField();
@@ -68,6 +69,7 @@ public class EmployeeMenu extends Stage{
         this.setScene(new Scene(grid, 900, 420));
 
 		// Labels and textfields
+		grid.add(employeesQueryLbl,0,8);
 		grid.add(employeeListCmb,1,8);
 		grid.add(fnameLbl,0,1);
 		grid.add(fnameTF,1,1);

@@ -16,6 +16,8 @@ public class jobMenu extends Stage{
 	GridPane grid = new GridPane();
 	Label jobidLbl = new Label(" JobID: ");
 	Label detailsLbl = new Label(" Details: ");
+
+
 	ComboBox jobsList = new ComboBox();
 
 	Button updateBtn = new Button("Update");
