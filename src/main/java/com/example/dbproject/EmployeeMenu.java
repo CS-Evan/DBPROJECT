@@ -42,7 +42,7 @@ public class EmployeeMenu extends Stage{
 
 	ComboBox employeeListCmb = new ComboBox();
 
-	ObservableList<String> empList = FXCollections.observableArrayList();
+	//ObservableList<String> empList = FXCollections.observableArrayList();
 
 
 	
@@ -53,7 +53,7 @@ public class EmployeeMenu extends Stage{
 		//empList.add("Employee 1");
 		//empList.add("Employee 2");
 		//empList.add("Employee 3");
-		empList.addAll(db.showEmployeeRecords());
+		//empList.addAll(db.showEmployeeRecords());
 		
 		grid.add(btn, 0, 0);
 		
@@ -79,10 +79,10 @@ public class EmployeeMenu extends Stage{
 		// Submit button
 		grid.add(submitBtn, 2, 5);
 
-		employeeListCmb.setItems(empList);
+		//employeeListCmb.setItems(empList);
 
 		//submitBtn.setOnAction(event -> db.showEmployeeRecords());
-		submitBtn.setOnAction(event -> fnameTF.setText(db.showEmployeeRecords()));
+		submitBtn.setOnAction(event -> fnameTF.setText(db.showEmployeeRecord(fnameTF.getText(), lnameTF.getText())));
 
 
         
