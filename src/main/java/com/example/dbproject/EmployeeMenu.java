@@ -22,7 +22,7 @@ public class EmployeeMenu extends Stage{
 	DatabaseOps db = new DatabaseOps();
 
 	Button btn = new Button("Back");
-	Button submitBtn = new Button("Submit");
+	Button submitBtn = new Button("Update");
 	GridPane grid = new GridPane();
 	// Labels
 	Label fnameLbl = new Label(" First Name: ");
@@ -31,6 +31,9 @@ public class EmployeeMenu extends Stage{
 	Label phoneLbl = new Label(" Phone #: ");
 	Label salaryLbl = new Label(" Salary: ");
 	Label hireDateLbl = new Label(" Hire Date: ");
+	Label managerIdLbl = new Label(" Manager ID: ");
+	Label jobIdLbl = new Label(" Hire Date: ");
+	Label deptIdLbl = new Label(" Hire Date: ");
 
 	// Textboxes
 	TextField fnameTF = new TextField();
@@ -39,6 +42,9 @@ public class EmployeeMenu extends Stage{
 	TextField phoneTF = new TextField();
 	TextField salaryTF = new TextField();
 	TextField hireDateTF = new TextField();
+	TextField jobIdTF = new TextField();
+	TextField managerIdTF = new TextField();
+	TextField deptIdTF = new TextField();
 
 	ComboBox employeeListCmb = new ComboBox();
 
@@ -62,7 +68,7 @@ public class EmployeeMenu extends Stage{
         this.setScene(new Scene(grid, 900, 420));
 
 		// Labels and textfields
-		grid.add(employeeListCmb,1,5);
+		grid.add(employeeListCmb,1,8);
 		grid.add(fnameLbl,0,1);
 		grid.add(fnameTF,1,1);
 		grid.add(lnameLbl,2,1);
@@ -73,11 +79,17 @@ public class EmployeeMenu extends Stage{
 		grid.add(phoneTF,3,3);
 		grid.add(salaryLbl,0,4);
 		grid.add(salaryTF,1,4);
-		grid.add(hireDateLbl,2,4);
-		grid.add(hireDateTF,3,4);
+		grid.add(hireDateLbl,2,5);
+		grid.add(hireDateTF,3,5);
+		grid.add(jobIdLbl,0,5);
+		grid.add(jobIdTF,1,5);
+		grid.add(managerIdLbl,2,6);
+		grid.add(managerIdTF,3,6);
+		grid.add(deptIdLbl,0,6);
+		grid.add(deptIdTF,1,6);
 
 		// Submit button
-		grid.add(submitBtn, 2, 5);
+		grid.add(submitBtn, 2, 7);
 
 		//employeeListCmb.setItems(empList);
 
