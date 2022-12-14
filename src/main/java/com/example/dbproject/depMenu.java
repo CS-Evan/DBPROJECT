@@ -1,15 +1,18 @@
 package com.example.dbproject;
 
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
+import javafx.scene.control.*;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
 public class depMenu extends Stage {
-	
 
+	Label jobidLbl = new Label(" JobID: ");
+	Label detailsLbl = new Label(" Details: ");
+	ComboBox jobsList = new ComboBox();
 	Button btn = new Button("Back");
+	TextArea detailsTF = new TextArea();
 	GridPane grid = new GridPane();
 		
 	BorderPane bp = new BorderPane();
@@ -26,6 +29,13 @@ public class depMenu extends Stage {
         this.setTitle("Department Menu");
         this.sizeToScene();
         this.show();
+		detailsTF.setPrefWidth(500);
+		detailsTF.setPrefHeight(100);
+		grid.add(jobidLbl,0,1);
+		grid.add(jobsList,2,1);
+		grid.add(detailsLbl,0,2);
+		grid.add(detailsTF,2,2);
+
 	}
 
 	private void backMenu() {
