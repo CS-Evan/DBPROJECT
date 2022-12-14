@@ -27,7 +27,7 @@ public class DatabaseOps {
     }
 
     public String showEmployeeRecord(String fname, String lname) {
-        String query = "SELECT EMAIL FROM " + TABLE_NAME +"WHERE lname = " + lname + " AND fname = " + fname;
+        String query = "SELECT EMAIL FROM " + TABLE_NAME +" WHERE lname = " + lname + " AND fname = " + fname;
 
         float total = 0f;
         try {
