@@ -12,6 +12,7 @@ public class depMenu extends Stage {
 	Label detailsLbl = new Label(" Details: ");
 	ComboBox jobsList = new ComboBox();
 	Button btn = new Button("Back");
+	Button updateBtn = new Button("Update");
 	TextArea detailsTF = new TextArea();
 	GridPane grid = new GridPane();
 		
@@ -35,6 +36,7 @@ public class depMenu extends Stage {
 		grid.add(jobsList,2,1);
 		grid.add(detailsLbl,0,2);
 		grid.add(detailsTF,2,2);
+		grid.add(updateBtn,2,3);
 
 	}
 
