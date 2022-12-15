@@ -12,6 +12,14 @@ public class depMenu extends Stage {
 	GridPane grid = new GridPane();
 		
 	BorderPane bp = new BorderPane();
+
+	Label deptIdLbl = new Label(" Dept ID: ");
+	Label deptNameLbl = new Label(" Dept Name: ");
+	Label deptManagerLbl = new Label(" Dept Manager: ");
+	ComboBox deptList = new ComboBox();
+	Button updateBtn = new Button("Update");
+	TextField deptIdTF = new TextField();
+	TextField deptManagerTF = new TextField();
 	
 	depMenu(){
 		
@@ -26,6 +34,15 @@ public class depMenu extends Stage {
         this.sizeToScene();
         this.show();
 
+		grid.add(deptNameLbl,0,1);
+		grid.add(deptList,1,1);
+
+		grid.add(deptIdLbl,0,2);
+		grid.add(deptIdTF,1,2);
+
+		grid.add(deptManagerLbl,0,3);
+		grid.add(deptManagerTF,1,3);
+		grid.add(updateBtn,1,4);
 
 	}
 
